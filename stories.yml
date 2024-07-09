@@ -1,0 +1,169 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_init1
+  - action: utter_init2
+  - action: utter_init3
+  - intent: mood_great
+  - action: utter_happy
+
+- story: greet_good_morning
+  steps:
+  - intent: greet_good_morning
+  - action: utter_good_morning
+  - action: utter_init1
+  - action: utter_init2
+  - action: utter_init3
+
+- story: greet_good_afternoon
+  steps:
+  - intent: greet_good_afternoon
+  - action: utter_good_afternoon
+  - action: utter_init1
+  - action: utter_init2
+  - action: utter_init3
+
+- story: greet_good_evening
+  steps:
+  - intent: greet_good_evening
+  - action: utter_good_evening
+  - action: utter_init1
+  - action: utter_init2
+  - action: utter_init3
+
+
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_init1
+  - action: utter_init2
+  - action: utter_init3
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_init1
+  - action: utter_init2
+  - action: utter_init3
+  - intent: deny
+  - action: utter_goodbye
+
+- story: greet and book a flight
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_init1
+  - action: utter_init2
+  - action: utter_init3
+  #- intent: book_flight
+  #- action: utter_book_flight
+
+- story: inquire about weather
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_init1
+  - action: utter_init2
+  - action: utter_init3
+  #- intent: ask_weather
+  #- action: utter_ask_weather
+  #- intent: inform
+#  - action: action_inform_city
+
+- story: get_time
+  steps:
+  - intent: ask_time
+  - action: action_get_time
+
+- story: get_date
+  steps:
+  - intent: ask_date
+  - action: action_get_date
+
+
+- story: order food and say thanks
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_init1
+  - action: utter_init2
+  - action: utter_init3
+  #- intent: order_food
+  #- action: utter_order_food
+  - intent: thanks
+  - action: utter_thanks
+
+
+#- story: search file path
+  #steps:
+  #  - intent: search_file
+#    - action: action_search_file
+
+
+
+#- story: Search for a file
+  #steps:
+  #- intent: search
+    #entities:
+    #- document_type: "ticket reports"
+#  - action: action_search
+
+#- story: finding the doc
+  #steps: 
+  #- intent: find
+ # - action: action_search
+
+#- story: Search file content
+  #steps:
+    #- intent: search_file_content
+    #- action: action_search_file_content
+
+- story: country name contest
+  steps:
+  - intent: country
+  - action: action_country_search
+
+- story: thanking
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+
+- story: Explore the file name
+  steps:
+  - intent: explore
+  - action: action_explore_file
+  - intent: thanks
+  - action: utter_thanks
+
+- story: Enquiry the file name without called
+  steps:
+  - intent: enquiry_file
+  - action: utter_enquiry_file
+  - action: utter_conform_note
+  - intent: keywords
+  - action: action_keyword
+  - intent: thanks
+  - action: utter_thanks
+
+- story: bot is challenging
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+
+#- story: fallback path
+  #steps:
+  #- intent: nlu_fallback
+ # - action: action_clarify
+  #- action: action_listen
+

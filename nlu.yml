@@ -1,0 +1,186 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+
+- intent: greet_good_morning
+  examples: |
+    - good morning
+    - morning
+    - hey, good morning
+
+- intent: greet_good_afternoon
+  examples: |
+    - good afternoon
+    - afternoon
+    - hey, good afternoon
+
+- intent: greet_good_evening
+  examples: |
+    - good evening
+    - evening
+    - hey, good evening
+
+
+- intent: goodbye
+  examples: |
+    - good by
+    - bye
+    - goodbye
+    - have a nice day
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - very sad
+    - unhappy
+    - so sad
+
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: ask_weather
+  examples: |
+    - What's the weather like today?
+    - tell me the weather forecast?
+    - Is it going to rain tomorrow?
+    - How's the weather in New York?
+
+- intent: ask_time
+  examples: |
+    - what it the time now?
+    - current time.
+    - time?
+    - time.
+
+- intent: ask_date
+  examples: |
+    - what is the date today?
+    - today's date.
+    - date?
+    - tell me the date.
+
+#- intent: inform
+  #examples: |
+    #- Losangles
+    #- Delhi
+   # - mumbai.
+
+- intent: book_flight
+  examples: |
+    - like to book a flight to Paris.
+    - Can you help me book a flight?
+    - What are the available flights to London?
+    - Book a flight from New York to Los Angeles.
+
+- intent: order_food
+  examples: |
+    - Iam hungry. Can I order some food?
+    - How should take order food from restaurant?
+    - order a pizza.
+
+- intent: enquiry_file
+  examples: |
+    #- Can you help me to find with content.
+    #- I'm looking for my document, please help me to find out.
+    #- if you don't mind , do content search for me.
+    #- could you help me to check my content .
+    #- I'm looking for information .
+    #- Can you help me to find information.
+    - can you help me
+    - please help me
+    - check my content
+    - seeking for information
+
+- intent: keywords
+  examples: |
+    - my content is
+    - my phrase is
+    - my keyword is 
+    #- my file name is 
+#    - ios
+  #  - policies file
+  #  - agreement 
+   
+
+
+- intent: country
+  examples: |
+    - country 
+    - land .
+    - empire 
+
+- intent: explore
+  examples: |
+    - Can you search for the keyword  in my documents?
+    - please search the content called  
+    - search the content named .
+    - content called 
+    - search the content called 
+
+- intent: thanks
+  examples: |
+    - Thank you
+    - Thanks a lot
+    - Thanks!
+    - Thank you very much
+    - thanks
+
+- lookup: countryyy_name
+  examples: |
+    - America
+    - India
+    - Paris
+    - Zambia
+    - Zimbabwe
+    - Albania
+    - Bangkok
+    - Korea
+    - England
+    - SouthAfrica
+    - Pakistan
+    - Austrelia
+    - Afganistan
+    - Bangldesh
+    - WestIndies
+    - SriLanka
+    - NewZealand
+
+

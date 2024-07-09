@@ -1,0 +1,173 @@
+version: "3.1"
+
+intents:
+  - greet
+  - greet_good_morning
+  - greet_good_afternoon
+  - greet_good_evening
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - ask_weather
+  - book_flight
+  - order_food
+  - thanks
+ # - search_file
+  #- extract_keywords
+  #- find_file
+  #- provide_country
+  #- search
+  #- find
+  #- search_file_content
+  - country
+  - explore
+  - enquiry_file
+ # - inform
+  - ask_time
+  - ask_date
+  - keywords
+  #- nlu_fallback
+
+
+
+
+
+#entities:
+  #- keyword
+  #- city_name
+  #- file_name
+  #- country
+ # - document_type
+  #- word
+  #- search_keyword
+
+
+#slots:
+  #city_name:
+    #type: text
+   # mappings:
+     # - type: from_entity
+       # entity: city_name
+
+
+
+responses:
+  utter_greet:
+    - text: "Hey! How can I assist you today?\n"
+    - text: "Hello, I try to assist.\n"
+
+  utter_good_morning:
+    - text: "Good morning!"
+    - text: "Very Good morning !"
+    - text: " A warm morning !"
+
+  utter_good_afternoon:
+    - text: "Good afternoon!"
+    - text: " Very Good afternoon.."
+    - text: " A sunny noon..."
+
+  utter_good_evening:
+    - text: "Good evening!"
+    - text: " Very Good evening"
+    - text: " A pleasent evening.."
+
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+    - text: "Make your day with good things, which gives you happiness"
+      image: "https://www.hindustantimes.com/ht-img/img/2023/05/31/1600x900/smile_day_1685533763641_1685533771462.jpg"
+
+  utter_did_that_help:
+    - text: "Did that help you?"
+
+  utter_happy:
+    - text: "Great, carry on!"
+
+  utter_goodbye:
+    - text: "Bye"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+
+  utter_ask_weather:
+    - text: "Sure! What city are you interested in?"
+
+  utter_book_flight:
+    - text: "Great! would you like to fly, please visit the online flight booking, you will get more information I hope it might be helpful."
+
+  utter_order_food:
+    - text: "Absolutely! I can help you with that. Go to near by food centers or Make the order in online.."
+
+  utter_enquiry_file:
+    - text: " 'Sure', please give me the content name.."
+    #- text: " 'Sure', please provide me with specific keyword to search.."
+    #- text: " Certainly, please specify the pharases what you are looking for.."
+  
+  utter_conform_note:
+    - text: "Note: kindly use 'my content is' in you phrase."
+    - text: "Note: kindly use 'my pharase is' in you phrase."
+    - text: "Note: kindly use 'my keyword is' in you phrase."
+
+  utter_thanks:
+    - text: "Let me know if there's anything else I can do for you."
+
+  utter_time:
+    - text: "The current time is {time}."
+
+  utter_date:
+    - text: "Today's date is {date}."
+
+ # utter_default:
+#    - text: "I can't get you?"
+
+  #utter_clarify:
+    #- text: "I'm sorry, I didn't understand. Could you please provide more details?"
+
+  utter_init1:
+    - text: "Assistance for searching the content"
+  utter_init2:
+    - text: "1. Kindly seek help and then follow instructions.    (or)"
+  utter_init3:
+    - text: "2. Directly search the content using the phrase '{called}'."
+
+actions:
+  - utter_greet
+  - utter_good_morning
+  - utter_good_afternoon
+  - utter_good_evening
+  - utter_ask_weather
+  - utter_book_flight
+  - utter_order_food
+  - utter_thanks
+  - utter_goodbye
+  - utter_iamabot
+  #- action_search_file
+#  - action_extract_keywords
+  #- action_print_entities
+#  - action_country_name_action
+  #- action_extract_country
+ # - action_process_custom_data
+  #- action_search
+  #- action_search_file_content
+  - action_country_search
+  - action_explore_file
+  - utter_enquiry_file
+ # - action_inform_city
+  - action_get_time
+  - action_get_date
+  - action_keyword
+  #- action_clarify
+  - utter_init1
+  - utter_init2
+  - utter_init3
+
+
+
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

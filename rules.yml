@@ -1,0 +1,50 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Respond to greetings
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Ask for city when user asks about weather
+  steps:
+  - intent: ask_weather
+  - action: utter_ask_weather
+
+- rule: Ask for flight details when user wants to book a flight
+  steps:
+  - intent: book_flight
+  - action: utter_book_flight
+
+- rule: Ask for order details when user wants to order food
+  steps:
+  - intent: order_food
+  - action: utter_order_food
+
+
+- rule: Respond to thanks
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+
+#- rule: Search file
+  #steps:
+  #- intent: search
+  #- action: action_search
+
+#- rule: Search file content
+  #steps:
+    #- intent: search_file_content
+    #- action: action_search_file_content
+
