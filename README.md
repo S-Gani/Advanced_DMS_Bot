@@ -78,7 +78,7 @@ This project integrates an Android client with a RASA-based AI bot running on a 
 
 - Both the client (Android app) and server (RASA bot) should be able to communicate over the network.
 - The bot can provide services regardless of how much it has been trained.
-- All files needed for content search must be placed in a folder named `Rasabotsharp` in your device's internal storage.
+- All files needed for content search must be placed in a folder named `Rasabot` in your device's internal storage.
 
 ---
 
